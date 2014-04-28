@@ -7,6 +7,10 @@
   <version>1.0-SNAPSHOT</version>
   <name>RESTfulExample Maven Webapp</name>
   <url>http://maven.apache.org</url>
+	<properties>
+		<junit.version>3.8.1</junit.version>
+		<jdk.version>1.7</jdk.version>
+	</properties>  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -17,8 +21,19 @@
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-server</artifactId>
-			<version>1.8</version>
+			<version>1.18.1</version>
 		</dependency>    
+<dependency>
+	<groupId>javax.xml.ws</groupId>
+	<artifactId>jaxws-api</artifactId>
+	<version>2.1-1</version>
+</dependency>		
+<dependency>
+	<groupId>com.sun.jersey</groupId>
+	<artifactId>jersey-servlet</artifactId>
+	<version>1.18.1</version>
+</dependency>
+            
   </dependencies>
 	<repositories>
 		<repository>
@@ -30,5 +45,16 @@
 	</repositories>  
   <build>
     <finalName>RESTfulExample</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>    
   </build>
 </project>
