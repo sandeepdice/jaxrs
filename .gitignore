@@ -1,0 +1,6 @@
+RESTfulExample/target
+RESTfulExample/target/*
+RESTfulExample/lib
+RESTfulExample/lib/*
+RESTfulExample/.settings
+RESTfulExample/.settings/*
