@@ -1,3 +1,3 @@
 jaxrs
 =====
-Trying out JAX-RS
+JAX-RS Examples
