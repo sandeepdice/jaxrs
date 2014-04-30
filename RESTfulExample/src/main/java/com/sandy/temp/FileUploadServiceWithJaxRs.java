@@ -13,12 +13,9 @@ import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.sandy.rest.fileupload.FileUploader;
-import com.sun.jersey.core.header.FormDataContentDisposition;
-import com.sun.jersey.multipart.FormDataParam;
 
 @Path("/file")
-public class FileUploadServiceWithJaxRs implements FileUploader {
+public class FileUploadServiceWithJaxRs {
 
 	@POST
 	@Consumes(MediaType.MULTIPART_FORM_DATA)

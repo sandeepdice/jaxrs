@@ -8,11 +8,11 @@
   <name>RESTfulExample Maven Webapp</name>
   <url>http://maven.apache.org</url>
 	<properties>
-		<junit.version>4.8.1</junit.version>
+		<junit.version>4.11</junit.version>
 		<jdk.version>1.7</jdk.version>
-		<jersey.version>1.18.1</jersey.version>
+		<jersey.version>2.8</jersey.version>
 		<commons.io.version>2.0.1</commons.io.version>
-		<mimepull.version>1.6</mimepull.version>
+		<mimepull.version>1.9.4</mimepull.version>
 		<javax.xml.ws.version>2.1-1</javax.xml.ws.version>
 	</properties>  
   <dependencies>
@@ -29,7 +29,7 @@
 		<version>${commons.io.version}</version>
 	</dependency>
 	<dependency>
-		<groupId>org.jvnet</groupId>
+		<groupId>org.jvnet.mimepull</groupId>
 		<artifactId>mimepull</artifactId>
 		<version>${mimepull.version}</version>
 	</dependency>
@@ -41,20 +41,15 @@
 	</dependency>
 	<!--  jersey dependencies  -->
 	<dependency>
-		<groupId>com.sun.jersey</groupId>
+		<groupId>org.glassfish.jersey.core</groupId>
 		<artifactId>jersey-server</artifactId>
 		<version>${jersey.version}</version>
 	</dependency>    
 	<dependency>
-		<groupId>com.sun.jersey.contribs</groupId>
-		<artifactId>jersey-multipart</artifactId>
+		<groupId>org.glassfish.jersey.media</groupId>
+		<artifactId>jersey-media-multipart</artifactId>
 		<version>${jersey.version}</version>
-	</dependency>		
-	<dependency>
-		<groupId>com.sun.jersey</groupId>
-		<artifactId>jersey-servlet</artifactId>
-		<version>${jersey.version}</version>
-	</dependency>	
+	</dependency>			
   </dependencies>
 	<repositories>
 		<repository>
