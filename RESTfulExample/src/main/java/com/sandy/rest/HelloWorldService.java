@@ -7,6 +7,12 @@ import javax.ws.rs.core.Response;
 
 @Path("/hello")
 public class HelloWorldService {
+	/**
+	 * Test url
+	 * http://localhost:8080/RESTfulExample/rest/hello/test
+	 * @param msg
+	 * @return
+	 */
 	@GET
 	@Path("/{param}")
 	public Response getMsg(@PathParam("param") String msg) {

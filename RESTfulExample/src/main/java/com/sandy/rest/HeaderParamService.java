@@ -9,6 +9,12 @@ import javax.ws.rs.core.Response;
 
 @Path("headerparam")
 public class HeaderParamService {
+	/**
+	 * Test URL: 
+	 * http://localhost:8080/RESTfulExample/rest/headerparam/get
+	 * @param userAgent
+	 * @return
+	 */
 	@GET
 	@Path("get")
 	public Response echoUserAgentParam(@HeaderParam ("user-agent") String userAgent) {
@@ -19,6 +25,12 @@ public class HeaderParamService {
  
 	}
 	
+	/**
+	 * Test URL
+	 * http://localhost:8080/RESTfulExample/rest/headerparam/getByContext
+	 * @param header
+	 * @return
+	 */
 	@GET
 	@Path("getByContext")
 	public Response echoUserAgentParam(@Context HttpHeaders header) {

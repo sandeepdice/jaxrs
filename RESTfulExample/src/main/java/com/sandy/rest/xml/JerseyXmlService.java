@@ -10,6 +10,11 @@ import com.sandy.model.Customer;
 
 @Path("/xml/customer")
 public class JerseyXmlService {
+	/**
+	 * Test URL http://localhost:8080/RESTfulExample/rest/xml/customer/1
+	 * @param pin
+	 * @return
+	 */
 	@GET
 	@Path("{pin}")
 	@Produces(MediaType.APPLICATION_XML)

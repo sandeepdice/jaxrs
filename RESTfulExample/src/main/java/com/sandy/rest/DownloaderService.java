@@ -11,6 +11,11 @@ import javax.ws.rs.core.Response.ResponseBuilder;
 @Path("downloader")
 public class DownloaderService {
 
+	/**
+	 * Test URL
+	 * http://localhost:8080/RESTfulExample/rest/downloader/textfile
+	 * @return
+	 */
 	@GET
 	@Produces("text/plain")
 	@Path("textfile")
@@ -20,6 +25,11 @@ public class DownloaderService {
 		return response.build();
 	}
 	
+	/**
+	 * Test URL
+	 * http://localhost:8080/RESTfulExample/rest/downloader/image
+	 * @return
+	 */
 	@GET
 	@Produces("image/png")
 	@Path("image")
@@ -29,6 +39,11 @@ public class DownloaderService {
 		return response.build();
 	}	
 	
+	/**
+	 * Test URL
+	 * http://localhost:8080/RESTfulExample/rest/downloader/pdf
+	 * @return
+	 */
 	@GET
 	@Produces("application/pdf")
 	@Path("pdf")
