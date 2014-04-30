@@ -1,4 +1,4 @@
-package com.sandy.rest.fileupload;
+package com.sandy.temp;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -13,11 +13,12 @@ import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import com.sandy.rest.fileupload.FileUploader;
 import com.sun.jersey.core.header.FormDataContentDisposition;
 import com.sun.jersey.multipart.FormDataParam;
 
 @Path("/file")
-public class FileUploadService {
+public class FileUploadServiceWithJaxRs implements FileUploader {
 
 	@POST
 	@Consumes(MediaType.MULTIPART_FORM_DATA)
