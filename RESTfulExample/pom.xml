@@ -59,6 +59,11 @@
 		<artifactId>mimepull</artifactId>
 		<version>1.6</version>
 	</dependency>
+	<dependency>
+		<groupId>org.jboss.resteasy</groupId>
+		<artifactId>resteasy-jaxb-provider</artifactId>
+		<version>2.2.0.GA</version>
+	</dependency>	
   </dependencies>
 	<repositories>
 		<repository>
