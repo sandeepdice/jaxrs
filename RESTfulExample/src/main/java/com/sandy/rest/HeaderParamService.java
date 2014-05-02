@@ -36,7 +36,7 @@ public class HeaderParamService {
 	public Response echoUserAgentParam(@Context HttpHeaders header) {
  
 		return Response.status(200)
-			.entity("echoUserAgentParam is called, fetching userAgent with @Context: " + header.getRequestHeader("user-agent").get(0))
+			.entity(header.getRequestHeader("user-agent").get(0))
 			.build();
  
 	}
