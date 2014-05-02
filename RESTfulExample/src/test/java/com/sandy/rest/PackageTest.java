@@ -59,7 +59,7 @@ public class PackageTest {
     public void testHeaderParamsGetByContext() {
         String responseMsg = target.path("headerparam/getByContext").request().get(String.class);
         assertEquals("Jersey/2.8 (HttpUrlConnection 1.7.0_51)", responseMsg);
-    }
+    }  
     
     @Test
     public void testMatrixParam() {
