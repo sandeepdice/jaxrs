@@ -16,6 +16,9 @@ public class XmlService {
 	@Produces(MediaType.APPLICATION_XML)
 	public User generateXml()
 	{
-		return new User("user", "10");
+		User user = new User();
+		user.setAge("10");
+		user.setUserName("user");
+		return user;
 	}
 }

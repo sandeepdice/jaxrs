@@ -27,6 +27,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.sandy.Main;
+import com.sandy.model.Customer;
 import com.sandy.model.User;
 import com.temp.FileUploadService;
 
@@ -162,8 +163,14 @@ public class TestCases {
  	
  	@Test
  	public void testXmlService() {
- 		Response response = target.path("xml/user").request(MediaType.APPLICATION_XML_TYPE).get();
- 		User responseStr = response.readEntity(User.class);
- 		assertEquals("File uploaded to: ", responseStr);
+ 		String responseStr = target.path("xml/customer/1").request(MediaType.APPLICATION_XML).get(String.class);
+ 		assertEquals("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><customer pin=\"1\"><name>mkyong</name></customer>", responseStr);
  	}
+ 	
+ 	@Test
+ 	public void testXmlService2() {
+ 		String responseStr = target.path("xml/user").request(MediaType.APPLICATION_XML).get(String.class);
+ 		assertEquals("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><user><age>10</age><userName>user</userName></user>", responseStr);
+ 	}
+
 }

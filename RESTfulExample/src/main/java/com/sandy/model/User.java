@@ -11,8 +11,26 @@ public class User {
 		this.age = age;
 	}
 	
-	@XmlElement(name="User Name")
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
+
 	String userName;
-	@XmlElement(name="First Name")
+	@XmlElement
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	
+	@XmlElement
+	public String getAge() {
+		return age;
+	}
+	public void setAge(String age) {
+		this.age = age;
+	}
+
 	String age;
 }
