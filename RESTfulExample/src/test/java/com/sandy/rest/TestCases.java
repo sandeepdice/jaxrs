@@ -173,4 +173,9 @@ public class TestCases {
  		assertEquals("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><user><age>10</age><userName>user</userName></user>", responseStr);
  	}
 
+ 	@Test
+ 	public void testJsonService() {
+ 		String responseStr = target.path("xml/userjson").request(MediaType.APPLICATION_JSON).get(String.class);
+ 		assertEquals("{\"age\":\"10\",\"userName\":\"user\"}", responseStr);
+ 	}
 }
